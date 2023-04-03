@@ -1,5 +1,5 @@
 import INIT_STATE from '../constants'
-import {getType, getPosts, updatePostOfPosts} from '../actions'
+import {getType, getPosts, updatePostOfPosts, clearPosts} from '../actions'
 
 
 function getPostsReducers(state = INIT_STATE.getPosts, action){
@@ -28,6 +28,15 @@ function getPostsReducers(state = INIT_STATE.getPosts, action){
                 isError: true,
                 isLoading: false,
                 isLoaded: true,
+            }
+        }
+
+        case getType(clearPosts):{
+            return {
+                data: [],
+                isError: false,
+                isLoaded: false,
+                isLoading: false,
             }
         }
 

@@ -16,7 +16,7 @@ function SocialMedia(props){
                     <Button className="socialMedia__btn google" block> 
                         <BsGoogle className="socialMedia__btn-icon"/>
                         Login with Google
-                    </Button>
+                    </Button> 
                     <hr/>
                     <div>
                         <Form errorMessages={errorMessages}></Form>
